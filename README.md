@@ -1,2 +1,3 @@
 # SuarezAI.jl
-Julia interface to Holy AI system
+
+A Julia interface to Holy Cross' Suarez AI system.

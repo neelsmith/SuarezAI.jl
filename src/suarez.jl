@@ -2,7 +2,7 @@
 
 """Submit a query to suarez and get the reply body as a Dict parsed from JSON.
 """
-function querysuarez(s, bearerkey; model  = "chatgpt-4o-latest")
+function  suarezreply(s, bearerkey; model  = "chatgpt-4o-latest")
 	chatcompleteurl = HTTP.URI("https://suarezai.holycross.edu/openai/chat/completions"; query = "bypass_filter=false")
 
 	hdrs = ["accept" => "application/json",
@@ -33,6 +33,8 @@ end
 
 
 """Extract message content from ChatGPT reply."""
-function messagebody(chatjson)	
+function asksuarez(s, k)	
+
+    chatjson = suarezreply(s, k)
 	chatjson["choices"][1]["message"]["content"] 
 end
