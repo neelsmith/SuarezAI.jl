@@ -1,5 +1,5 @@
 module SuarezAI
 
-greet() = print("Hello World!")
+include("suarez.jl")
 
 end # module SuarezAI
